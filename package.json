@@ -1,0 +1,34 @@
+{
+  "name": "dia-for-vscode",
+  "displayName": "Dia for Vscode",
+  "description": "Adds Dia support for Vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dia",
+        "aliases": [
+          "Dia",
+          "dia"
+        ],
+        "extensions": [
+          ".dia"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dia",
+        "scopeName": "source.dia",
+        "path": "./syntaxes/dia.tmLanguage.json"
+      }
+    ]
+  }
+}

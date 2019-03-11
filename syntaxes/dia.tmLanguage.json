@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Dia",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#characters"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "functions"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.dia",
+          "match": "\\b(if|fn|else|import)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.dia",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.dia",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "characters": {
+      "name": "string.quoted.single.dia",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.dia",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "begin": "//",
+      "end": "$",
+      "name": "comment.line.double-slash.dia",
+      "patterns": []
+    },
+    "numbers": {
+      "match": "\\d+",
+      "name": "constant.numeric.dia",
+      "patterns": []
+    },
+    "types": {
+      "match": "\\b(fn|int|fp)\\b",
+      "name": "storage.type.dia",
+      "patterns": []
+    },
+    "operators": {
+      "match": "\\b(>|<|-|\\+)\\b",
+      "name": "keyword.operator.dia",
+      "patterns": []
+    },
+    "functions": {
+      "match": "\\b\\w+\\b(?=\\()",
+      "name": "support.function.dia",
+      "patterns": []
+    }
+  },
+  "scopeName": "source.dia"
+}
